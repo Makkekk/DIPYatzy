@@ -13,3 +13,5 @@ function rollDice() {
     die.innerHTML = `<img src="images/dice${value}.svg" alt="Die ${value}">`;
   });
 }
+
+rollButton
