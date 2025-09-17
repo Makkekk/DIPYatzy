@@ -9,7 +9,7 @@ dice.forEach(die => {
 
 function rollDice() {
   dice.forEach(die => {
-    const value = Math.floor(Math.random() * 6) + 1; // random 1–6
+    const value = Math.floor(Math.random() * 6) + 1;
     die.innerHTML = `<img src="images/dice${value}.svg" alt="Die${value}">`;
   });
 }
