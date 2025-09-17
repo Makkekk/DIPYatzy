@@ -1,9 +1,16 @@
-import Rafflecup from "./AppLaget/Rafflecup.js";
-
 const diceElements = document.querySelectorAll(".die");
 const rollButton = document.getElementById("roll-button");
 
-const cup = new Rafflecup();
+let cup = {
+  dices: [{ eyes: 6, hold: false },
+  { eyes: 6, hold: false },
+  { eyes: 6, hold: false },
+  { eyes: 6, hold: false },
+  { eyes: 6, hold: false }],
+  numberOfThrows: 3
+}
+
+
 for (let dice of diceElements) {
   dice.attributes('src') = 'Images/dice6.svg'
 }
@@ -15,8 +22,8 @@ updateThrowsLeft();
 
 
 function updateDicePic(index, eyes) {
- let  diceNode = document.getElementById('dice'+index)
- diceNode.src = "Images/dice" + eyes + '.svg'
+  let diceNode = document.getElementById('dice' + index)
+  diceNode.src = "Images/dice" + eyes + '.svg'
 }
 
 function updateThrowsLeft() {
@@ -26,11 +33,15 @@ function updateThrowsLeft() {
   }
 }
 
-function rollDice() {
-  if (cup.getNumberOfThrowsLeft() > 0) {
-    cup.throwDice();
-    updateDicePic(3, 4);
-    updateThrowsLeft();
+function throwDice() {
+  if (cup.numberOfThrows > 0) {
+    for (let index in cup.dices) {
+      if (!cup[index].hold) {
+        let eyeValue = cup.dices[index].eyes = Math.floor(Math.random() * 6) + 1;
+        updateDicePic(index, eyeValue);
+      }
+    }
+    cup.numberOfThrows--;
   } else {
     alert('Ingen kast tilbage');
   }
