@@ -12,12 +12,4 @@ export default class Die {
     }
 }
 
-let cup = [{eyes: 5, hold: false}, {eyes: 5, hold: false}, {eyes: 5, hold: false}, {eyes: 5, hold: false}, {eyes: 5, hold: false}]
 
-function throwDice() {
-    for (let index in cup){
-        if cup[index].hold == false {
-            dice.eyes = 
-        }
-    }
-}
