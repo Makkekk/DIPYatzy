@@ -1,17 +1,37 @@
-const dice = document.querySelectorAll(".die");
+import Rafflecup from "./AppLaget/Rafflecup.js";
+
+const diceElements = document.querySelectorAll(".die");
 const rollButton = document.getElementById("roll-button");
- 
 
-dice.forEach(die => {
-  die.innerHTML = `<img src="images/dice6.svg" alt="Die 6">`;
-});
-
-
-function rollDice() {
-  dice.forEach(die => {
-    const value = Math.floor(Math.random() * 6) + 1;
-    die.innerHTML = `<img src="images/dice${value}.svg" alt="Die${value}">`;
-  });
+const cup = new Rafflecup();
+for (let dice of diceElements) {
+  dice.attributes('src') = 'Images/dice6.svg'
 }
 
-rollButton.addEventListener("click",rollDice)
+rollButton.addEventListener("click", rollDice);
+
+updateDicePic();
+updateThrowsLeft();
+
+
+function updateDicePic(index, eyes) {
+ let  diceNode = document.getElementById('dice'+index)
+ diceNode.src = "Images/dice" + eyes + '.svg'
+}
+
+function updateThrowsLeft() {
+  const throwsLeftNode = document.getElementById('throws-left');
+  if (throwsLeftNode) {
+    throwsLeftNode.textContent = `Kast tilbage: ${cup.getNumberOfThrowsLeft()}`;
+  }
+}
+
+function rollDice() {
+  if (cup.getNumberOfThrowsLeft() > 0) {
+    cup.throwDice();
+    updateDicePic(3, 4);
+    updateThrowsLeft();
+  } else {
+    alert('Ingen kast tilbage');
+  }
+}
