@@ -4,21 +4,19 @@ const diceElements = document.querySelectorAll(".die");
 const rollButton = document.getElementById("roll-button");
 
 const cup = new Rafflecup();
-
-diceElements.forEach(die => {
-  die.innerHTML = `<img src="Images\dice6.svg" alt="Die 6">`;
-  
-});
+for (let dice of diceElements) {
+  dice.attributes('src') = 'Images/dice6.svg'
+}
 
 rollButton.addEventListener("click", rollDice);
 
+updateDicePic();
+updateThrowsLeft();
 
 
-function updateDicePic() {
-  cup.getDice().forEach((die, index) => {
-    const value = die.getEyes();
-    diceElements[index].innerHTML = `<img src="Images/dice${value}.svg" alt="Die ${value}">`;
-  });
+function updateDicePic(index, eyes) {
+ let  diceNode = document.getElementById('dice'+index)
+ diceNode.src = "Images/dice" + eyes + '.svg'
 }
 
 function updateThrowsLeft() {
@@ -31,7 +29,7 @@ function updateThrowsLeft() {
 function rollDice() {
   if (cup.getNumberOfThrowsLeft() > 0) {
     cup.throwDice();
-    updateDicePic();
+    updateDicePic(3, 4);
     updateThrowsLeft();
   } else {
     alert('Ingen kast tilbage');

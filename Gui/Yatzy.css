@@ -4,9 +4,10 @@
     margin: 20px 0;
 }
 
-.die img {
+#dice-container img {
     width: 60px;
     height: 60px;
+    
 }
 
 .upperScores,.lowerScores {
