@@ -1,5 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+  width: 100;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 #dice-container {
     display: flex;
+
     gap: 10px;
     margin: 20px 0;
 }
@@ -20,7 +31,7 @@
 .upperScores li, .lowerScores li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
   border: 1px solid #000;       
   padding: 8px 12px;              
   margin-bottom: 5px;             
