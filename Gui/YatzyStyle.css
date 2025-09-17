@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(to bottom, #61140f, #00f1fe7a);
+  background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+
 }
 
 #roll-button {
@@ -8,10 +9,23 @@ body {
   font-weight: bold;
   border: none;
   cursor:pointer;
-  border-radius: 8px
-  
-  
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
+
+#throws-left {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;            
+  background-color: transparent; 
+  padding: 0;                
+  border-radius: 0;           
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
 #roll-button:hover {
   background-color: #03fdfd7a;
 }
@@ -28,9 +42,10 @@ h2 {
 
 #dice-container {
     display: flex;
-
+    justify-content:center;
     gap: 10px;
     margin: 20px 0;
+
 }
 
 #dice-container img {
@@ -62,11 +77,11 @@ h2 {
   
 }
 
-
 .upper-total {
   display: flex;
   gap: 10px;          
   margin: 10px 0;
+  justify-content: center;
 }
 
 .sum-box {
@@ -81,12 +96,11 @@ h2 {
   background-color: #f5f5f5;
   font-weight: bold;
   cursor: default; 
+  font-size: 18;
+  
 }
 
-.sum-box .score {
-  margin-top: 5px;
-  font-size: 18px;
-}
+
 
 .total-score-box {
   width: 100px;             
@@ -99,7 +113,8 @@ h2 {
   align-items: center;
   background-color: #f5f5f5;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 10px auto;
+  
 }
 
 .total-score-box .score {
