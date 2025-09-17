@@ -12,8 +12,6 @@ diceElements.forEach(die => {
 
 rollButton.addEventListener("click", rollDice);
 
-updateDicePic();
-updateThrowsLeft();
 
 
 function updateDicePic() {
