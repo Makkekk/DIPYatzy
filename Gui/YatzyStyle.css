@@ -1,3 +1,21 @@
+body {
+  background: linear-gradient(to bottom, #61140f, #00f1fe7a);
+}
+
+#roll-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor:pointer;
+  border-radius: 8px
+  
+  
+}
+#roll-button:hover {
+  background-color: #03fdfd7a;
+}
+
 h1 {
     text-align: center;
 }
