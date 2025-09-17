@@ -1,0 +1,11 @@
+#dice-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.die img {
+    width: 60px;
+    height: 60px;
+}
+

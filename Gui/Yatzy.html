@@ -4,12 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yatzy</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="yatzy.js" defer></script>
+    <link rel="stylesheet" href="Yatzy.css">
+    <script src="domModification.js" defer></script>
 </head>
 <body>
     <h1> Yatzy the game </h1>
-    
+
+<div id="dice-container">
+     <div class="die" id="die1"></div>
+     <div class="die" id="die2"></div>
+     <div class="die" id="die3"></div>
+     <div class="die" id="die4"></div>
+     <div class="die" id="die5"></div>
+</div>
+
+<button id ="roll-button">Roll dice</button>
+
+<div id="scoreTable">
+    <h2>Øvre Sektion</h2>
+    <ul class="upperScores">
+        <li class="En">1'ere</li>
+        <li class="To">2'ere</li>
+        <li class="Tre">3'ere</li>
+        <li class="Fire">4'ere</li>
+        <li class="Fem">5'ere</li>
+        <li class="Seks">6'ere</li>
+    </ul>
+
+    <h2>Nedre Sektion</h2>
+    <ul class="lowerScores">
+        <li class = "etPar">1 par</li>
+        <li class="toPar">2 par</li>
+        <li class="trePar">3 par</li>
+        <li class="fireEns">4 ens</li>
+        <li class="lilleStraight">Lille straight</li>
+        <li class="stortStraigt">Stort Straight</li>
+        <li class="fuldtHus">Fuldt hus</li>
+        <li class="Chance">Chance</li>
+        <li class="YATZY">YATZY</li>
+        </ul>
+</div>
+
+
 
 </body>
 </html>
