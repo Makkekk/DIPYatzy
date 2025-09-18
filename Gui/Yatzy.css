@@ -4,9 +4,10 @@
     margin: 20px 0;
 }
 
-.die img {
+#dice-container img {
     width: 60px;
     height: 60px;
+    
 }
 
 .upperScores,.lowerScores {
@@ -16,3 +17,65 @@
     font-size: 18px;
 
 }
+
+.upperScores li, .lowerScores li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  border: 1px solid #000;       
+  padding: 8px 12px;              
+  margin-bottom: 5px;             
+  border-radius: 5px;            
+  background-color: #f9f9f9;     
+  cursor: pointer;
+  background-color: #e0e0e0;
+  
+  
+}
+
+
+.upper-total {
+  display: flex;
+  gap: 10px;          
+  margin: 10px 0;
+}
+
+.sum-box {
+  width: 80px;        
+  height: 80px;      
+  border: 2px solid #000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  cursor: default; 
+}
+
+.sum-box .score {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.total-score-box {
+  width: 100px;             
+  height: 80px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.total-score-box .score {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+
