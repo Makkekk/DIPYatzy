@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yatzy</title>
-    <link rel="stylesheet" href="Yatzy.css">
-    <script type="module" src="App.js" defer></script>
+    <link rel="stylesheet" href="YatzyStyle.css">
+    <script type="module" src="App.js"></script>
 </head>
+
 <body>
     <h1> Yatzy the game </h1>
 
@@ -18,50 +20,57 @@
     <img src="Images/dice6.svg" class="die" id="dice4">
 </div>
 
+
 <button id ="roll-button">Roll dice</button>
 <p id="throws-left">Kast tilbage: 3</p>
 
 
-<div id="upper-section">
-    <h2>Øvre Sektion</h2>
-    <ul class="upperScores">
-        <li class="En">1'ere: <span class="score">0</span></li>
-        <li class="To">2'ere: <span class="score">0</span></li>
-        <li class="Tre">3'ere <span class="score">0</span></li>
-        <li class="Fire">4'ere<span class="score">0</span></li>
-        <li class="Fem">5'ere <span class="score">0</span></li>
-        <li class="Seks">6'ere<span class="score">0</span></li>
-    </ul>
 
-<div class="upper-total">
-  <div class="sum-box">
-    <span class="label">Sum</span>
-    <span id="upper-sum" class="score">0</span>
-  </div>
-  <div class="sum-box">
-    <span class="label">Bonus</span>
-    <span id="upper-bonus" class="score">0</span>
-  </div>
-</div>
-
-    <h2>Nedre Sektion</h2>
-    <ul class="lowerScores">
-        <li class = "etPar">1 par<span class="score">0</span></li>
-        <li class="toPar">2 par<span class="score">0</span></li>
-        <li class="trePar">3 par<span class="score">0</span></li>
-        <li class="fireEns">4 ens<span class="score">0</span></li>
-        <li class="lilleStraight">Lille straight<span class="score">0</span></li>
-        <li class="stortStraigt">Stort Straight<span class="score">0</span></li>
-        <li class="fuldtHus">Fuldt hus<span class="score">0</span></li>
-        <li class="Chance">Chance<span class="score">0</span></li>
-        <li class="YATZY">YATZY<span class="score">0</span></li>
+    <div id="upper-section" class="score-section"></div>
+        <h2>Øvre Sektion</h2>
+        <ul class="upperScores">
+            <li class="En">1'ere: <span class="score">0</span></li>
+            <li class="To">2'ere: <span class="score">0</span></li>
+            <li class="Tre">3'ere: <span class="score">0</span></li>
+            <li class="Fire">4'ere: <span class="score">0</span></li>
+            <li class="Fem">5'ere: <span class="score">0</span></li>
+            <li class="Seks">6'ere: <span class="score">0</span></li>
         </ul>
 
-       <div class="total-score-box">
-  <span class="label">Total Score</span>
-  <span id="total-score" class="score">0</span>
-</div>
 
-</div>
+        <div class="upper-total">
+            <div class="sum-box">
+                <span class="label">Sum</span>
+                <span id="upper-sum" class="score">0</span>
+            </div>
+            <div class="sum-box">
+                <span class="label">Bonus</span>
+                <span id="upper-bonus" class="score">0</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="lower-section" class="score-section">
+        <h2>Nedre Sektion</h2>
+        <ul class="lowerScores">
+            <li class="etPar">1 par<span class="score">0</span></li>
+            <li class="toPar">2 par<span class="score">0</span></li>
+            <li class="trePar">3 par<span class="score">0</span></li>
+            <li class="fireEns">4 ens<span class="score">0</span></li>
+            <li class="lilleStraight">Lille straight<span class="score">0</span></li>
+            <li class="stortStraigt">Stort Straight<span class="score">0</span></li>
+            <li class="fuldtHus">Fuldt hus<span class="score">0</span></li>
+            <li class="Chance">Chance<span class="score">0</span></li>
+            <li class="YATZY">YATZY<span class="score">0</span></li>
+        </ul>
+
+        <div class="total-score-box">
+            <span class="label">Total Score</span>
+            <span id="total-score" class="score">0</span>
+        </div>
+    </div>
+
 </body>
+
 </html>

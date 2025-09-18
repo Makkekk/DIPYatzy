@@ -1,7 +1,51 @@
+body {
+  background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+
+}
+
+#roll-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor:pointer;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+#throws-left {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;            
+  background-color: transparent; 
+  padding: 0;                
+  border-radius: 0;           
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#roll-button:hover {
+  background-color: #03fdfd7a;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+  width: 100;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 #dice-container {
     display: flex;
+    justify-content:center;
     gap: 10px;
     margin: 20px 0;
+
 }
 
 #dice-container img {
@@ -21,7 +65,7 @@
 .upperScores li, .lowerScores li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
   border: 1px solid #000;       
   padding: 8px 12px;              
   margin-bottom: 5px;             
@@ -33,11 +77,11 @@
   
 }
 
-
 .upper-total {
   display: flex;
   gap: 10px;          
   margin: 10px 0;
+  justify-content: center;
 }
 
 .sum-box {
@@ -52,12 +96,11 @@
   background-color: #f5f5f5;
   font-weight: bold;
   cursor: default; 
+  font-size: 18;
+  
 }
 
-.sum-box .score {
-  margin-top: 5px;
-  font-size: 18px;
-}
+
 
 .total-score-box {
   width: 100px;             
@@ -70,12 +113,18 @@
   align-items: center;
   background-color: #f5f5f5;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 10px auto;
+  
 }
 
 .total-score-box .score {
   margin-top: 5px;
   font-size: 18px;
+}
+
+.die.hold {
+  border: 3px solid red;
+  opacity: 0.7;
 }
 
 
