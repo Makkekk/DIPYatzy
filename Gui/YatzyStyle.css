@@ -1,6 +1,17 @@
 body {
   background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+}
 
+.upperScores li, .lowerScores li {
+   display: grid;
+  grid-template-columns: 1fr auto; /* field on left, score on right */
+  align-items: center;
+  border: 1px solid #000;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
 }
 
 #roll-button {
@@ -8,7 +19,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
@@ -17,104 +28,81 @@ body {
 #throws-left {
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;            
-  background-color: transparent; 
-  padding: 0;                
-  border-radius: 0;           
+  color: #ffffff;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
   display: block;
   text-align: center;
   margin-top: 10px;
 }
+
 
 #roll-button:hover {
   background-color: #03fdfd7a;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-  width: 100;
   text-align: center;
   margin-bottom: 10px;
 }
 
 #dice-container {
-    display: flex;
-    justify-content:center;
-    gap: 10px;
-    margin: 20px 0;
-
+  display: grid;
+  grid-template-columns: repeat(5, 60px); 
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
 }
 
 #dice-container img {
-    width: 60px;
-    height: 60px;
-    
+  width: 60px;
+  height: 60px;
 }
 
-.upperScores,.lowerScores {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-
+.upperScores, .lowerScores {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
 }
 
-.upperScores li, .lowerScores li {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-  border: 1px solid #000;       
-  padding: 8px 12px;              
-  margin-bottom: 5px;             
-  border-radius: 5px;            
-  background-color: #f9f9f9;     
-  cursor: pointer;
-  background-color: #e0e0e0;
-  
-  
-}
 
 .upper-total {
-  display: flex;
-  gap: 10px;          
-  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
   justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .sum-box {
-  width: 80px;        
-  height: 80px;      
-  border: 2px solid #000;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;   
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-  font-weight: bold;
-  cursor: default; 
-  font-size: 18;
-  
-}
-
-
-
-.total-score-box {
-  width: 100px;             
+  width: 80px;
   height: 80px;
   border: 2px solid #000;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;   
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  cursor: default;
+  font-size: 18px;
+}
+
+.total-score-box {
+  width: 100px;
+  height: 80px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
   background-color: #f5f5f5;
   font-weight: bold;
   margin: 10px auto;
-  
 }
 
 .total-score-box .score {
@@ -126,5 +114,3 @@ h2 {
   border: 3px solid red;
   opacity: 0.7;
 }
-
-
