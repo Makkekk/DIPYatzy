@@ -136,14 +136,27 @@ export function largeStraightScore() {
 }
 
 export function fullHouseScore() {
-    let threeOfTheSame = threeOfAKindScore();
-    let twoOfTheSame = onePairScore();
+  let counts = {};
 
-    if (threeOfTheSame === 0 || twoOfTheSame === 0) return 0;
-    if (threeOfTheSame / 3 === twoOfTheSame / 2) return 0;
+  for (let die of cup.dices) {
+    counts[die.eyes] = (counts[die.eyes] || 0) + 1;
+  }
 
-    return threeOfTheSame + twoOfTheSame;
+  let three = 0;
+  let two = 0;
+
+  for (let face in counts) {
+    if (counts[face] === 3) three = parseInt(face);
+    if (counts[face] === 2) two = parseInt(face);
+  }
+
+  if (three > 0 && two > 0) {
+    return three * 3 + two * 2;
+  }
+
+  return 0;
 }
+
 
 export function chanceScore() {
     let sum = 0;
@@ -159,7 +172,7 @@ export function yatzyScore() {
     for (let dice of cup.dices) {
         counts[dice.eyes] = (counts[dice.eyes] || 0) + 1;
         if (counts[dice.eyes] >= 5) {
-            return 50;
+            return 50 + (dice.eyes * 5);
         }
     }
     return 0;
