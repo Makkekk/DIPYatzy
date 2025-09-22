@@ -21,7 +21,6 @@ for (let i = 0; i < cup.dices.length; i++) {
   diceNode.addEventListener("click", () => toggleHold(i));
 }
 
-
 // Husk hvilke kategorier der er låst
 const lockedCategories = {};
 

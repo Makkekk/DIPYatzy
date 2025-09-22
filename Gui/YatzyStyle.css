@@ -10,12 +10,14 @@ body {
     ". dice ."
     ". upper ."
     ". lower .";
-  background-color: #222831;
   color: #000000; 
   grid-template-columns: 1fr minmax(600px, 900px) 1fr;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr 1fr;
   margin: 0;
   padding: 1rem;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+  height: 100vh;
 }
 
 #dice-section {
@@ -47,11 +49,9 @@ body {
   width: 100%;   
 }
 
-
 #dice-container {
   grid-area: dice;
   grid-template-columns: 60px 60px 60px 60px 60px;
-  
   gap: 10px;
   margin: 10px 0;
 }
@@ -95,6 +95,8 @@ h1 {
   grid-area: header;
   text-align: center;
   margin-bottom: 0.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #03fdfd;
 }
 
 .upper-total {
@@ -134,9 +136,10 @@ h1 {
   display: grid;
   place-items: center;
   background-color: #f5f5f5;
+  grid-template-rows: auto auto;
   font-weight: bold;
   margin: 10px auto;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .die.hold {
@@ -146,10 +149,11 @@ h1 {
 
 .lowerScores li.locked, .upperScores li.locked {
   background-color: #cccccc5b;
-  pointer-events: none; /* kan ikke klikkes mere */
+  pointer-events: none;
 }
 
 .score-section {
   grid-area: score;
+  
 }
 
