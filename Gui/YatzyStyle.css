@@ -1,13 +1,26 @@
+
 body {
   display: grid;
-  grid-template-rows: auto 1fr ;
-  grid-template-columns: 1fr;
-  height: auto;
+   grid-template-areas:
+    ". header ."
+    ". dice ."
+    ". upper ."
+    ". lower .";
+  color: #000000; 
+  grid-template-columns: 1fr minmax(600px, 900px) 1fr;
+  grid-template-rows: auto auto 1fr 1fr;
   margin: 0;
   font-family: sans-serif;
-
   background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+  height: 100vh;
+}
 
+#dice-section {
+  grid-area: dice;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .upperScores li, .lowerScores li {
@@ -25,17 +38,15 @@ body {
 .upperScores, .lowerScores {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;       /* center the list */
+  margin: 0 auto;       
   font-size: 14px;
-  max-width: 700px;     /* limit the width so it fits on screen */
-  width: 100%;          /* take full width up to max-width */
+  max-width: 700px;    
+  width: 100%;   
 }
 
-
 #dice-container {
-  display: grid;
+  grid-area: dice;
   grid-template-columns: 60px 60px 60px 60px 60px;
-  justify-content: center;
   gap: 10px;
   margin: 10px 0;
 }
@@ -45,8 +56,8 @@ body {
   height: auto;
 }
 
-
 #roll-button {
+  grid-area: dice;
   padding: 10px 11px;
   font-size: 16px;
   font-weight: bold;
@@ -58,6 +69,7 @@ body {
 }
 
 #throws-left {
+  grid-area: dice;
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
@@ -75,26 +87,30 @@ body {
 }
 
 h1 {
+  grid-area: header;
   text-align: center;
-  font-size: 24px;
-  
-}
-
-h2 {
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 18px;
-  
+  margin-bottom: 0.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #03fdfd;
 }
 
 .upper-total {
-  display: grid;
-  grid-template-columns: repeat(2, 80px);
-  justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
+  display: flex;                
+  justify-content: flex-end;     
+  gap: 10px;                    
+  margin-top: 10px;             
+  width: 100%;                  
+  box-sizing: border-box;
 }
 
+#upper-section {
+    grid-area: upper;
+}
+
+#lower-section {
+    grid-area: lower;
+}
+  
 .sum-box {
   width: 45px;
   height: 45px;
@@ -116,9 +132,10 @@ h2 {
   display: grid;
   place-items: center;
   background-color: #f5f5f5;
+  grid-template-rows: auto auto;
   font-weight: bold;
   margin: 10px auto;
-  font-size: 18;
+  font-size: 14px;
 }
 
 .die.hold {
@@ -128,6 +145,13 @@ h2 {
 
 .lowerScores li.locked, .upperScores li.locked {
   background-color: #cccccc5b;
-  pointer-events: none; /* kan ikke klikkes mere */
+  pointer-events: none;
 }
+
+.score-section {
+  grid-area: score;
+  
+}
+
+
 
