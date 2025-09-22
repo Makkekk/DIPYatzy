@@ -105,7 +105,7 @@ function setupCategoryClicks() {
         span.parentElement.addEventListener('click', () => {
             const category = span.parentElement.classList[0]; // fx "En", "etPar"
 
-            if (!lockedCategories[category]) {
+            if (!lockedCategories[category] && cup.numberOfThrows < 3) {
                 lockedCategories[category] = true;
                 span.parentElement.classList.add("locked");
 
