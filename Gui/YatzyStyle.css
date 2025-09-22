@@ -89,7 +89,6 @@ body {
 h1 {
   grid-area: header;
   text-align: center;
-  margin-bottom: 0.2rem;
   font-family: 'Courier New', Courier, monospace;
   color: #03fdfd;
 }
@@ -99,8 +98,9 @@ h1 {
   justify-content: flex-end;     
   gap: 10px;                    
   margin-top: 10px;             
-  width: 100%;                  
-  box-sizing: border-box;
+  width: 700px;           
+  margin-left: auto;  
+  margin-right: auto;     
 }
 
 #upper-section {
@@ -123,7 +123,11 @@ h1 {
   cursor: default;
   font-size: 14px;
 }
-
+.total-score-box .label {
+  display: block;       
+  text-align: center; 
+  font-size: 14px;
+}
 .total-score-box {
   width: 60px;
   height: 60px;
@@ -135,7 +139,7 @@ h1 {
   grid-template-rows: auto auto;
   font-weight: bold;
   margin: 10px auto;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 .die.hold {
