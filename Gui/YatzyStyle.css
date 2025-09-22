@@ -12,6 +12,8 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+  height: 100vh;
+
 }
 
 #dice-section {
