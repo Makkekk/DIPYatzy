@@ -110,21 +110,34 @@ function setupCategoryClicks() {
                 span.parentElement.classList.add("locked");
 
                 // Reset til ny runde
-                for (let die of cup.dices) {
-                    die.hold = false;
-                    die.eyes = 6;
-                }
-                cup.numberOfThrows = 3;
-
-                for (const index in cup.dices) {
-                    updateDicePic(index, 6);
-                    document.getElementById("dice" + index).classList.remove("hold");
-                }
-
-                updateThrowsLeft();
+                resetRound();
                 updateTotals();
             }
         })
+    }
+}
+
+function resetRound() {
+    cup.numberOfThrows = 3;
+
+    for (let die of cup.dices) {
+        die.hold = false;
+        die.eyes = 6;
+    }
+
+    for (const index in cup.dices) {
+        updateDicePic(index, 6);
+        document.getElementById("dice" + index).classList.remove("hold");
+    }
+
+    updateThrowsLeft();
+
+    const scores = document.querySelectorAll('.score');
+    for (const span of scores) {
+        const category = span.parentElement.classList[0];
+        if (!lockedCategories[category]) {
+            span.textContent = "0";
+        }
     }
 }
 
@@ -142,7 +155,9 @@ function updateTotals() {
     document.getElementById("upper-sum").textContent = upperSum;
 
     // Bonus
-    let bonus = (upperSum >= 63) ? 50 : 0;
+    let bonus = 0;
+    if (upperSum >= 63) bonus = 50;
+
     document.getElementById("upper-bonus").textContent = bonus;
 
     // Nedre sektion
@@ -173,5 +188,4 @@ function updateTotals() {
 
 // Init
 updateThrowsLeft();
-updateScores();
 setupCategoryClicks();
