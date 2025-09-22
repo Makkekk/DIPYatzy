@@ -105,14 +105,19 @@ function setupCategoryClicks() {
         span.parentElement.addEventListener('click', () => {
             const category = span.parentElement.classList[0]; // fx "En", "etPar"
 
-            if (!lockedCategories[category]) {
+            if (!lockedCategories[category] && cup.numberOfThrows <3) {
                 lockedCategories[category] = true;
                 span.parentElement.classList.add("locked");
+
+                if (Object.keys(lockedCategories).length === 15){
+                    const totalScore = document.getElementById("total-score").textContent;
+                    alert("Spil afsluttet! Du fik i alt " + totalScore + " point 🎉");
+                }
 
                 // Reset til ny runde
                 resetRound();
                 updateTotals();
-            }
+            } 
         })
     }
 }
