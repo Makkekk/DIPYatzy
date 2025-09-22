@@ -81,7 +81,6 @@ body {
   margin-top: 10px;
 }
 
-
 #roll-button:hover {
   background-color: #03fdfd7a;
 }
@@ -156,6 +155,3 @@ h1 {
   grid-area: score;
   
 }
-
-
-
