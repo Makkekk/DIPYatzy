@@ -11,57 +11,53 @@
 
 <body>
     <h1> Yatzy the game </h1>
-
-<div id="dice-container">
-    <img src="Images/dice6.svg" class="die" id="dice0">
-    <img src="Images/dice6.svg" class="die" id="dice1">
-    <img src="Images/dice6.svg" class="die" id="dice2">
-    <img src="Images/dice6.svg" class="die" id="dice3">
-    <img src="Images/dice6.svg" class="die" id="dice4">
-</div>
-
-
-<button id ="roll-button">Roll dice</button>
-<p id="throws-left">Kast tilbage: 3</p>
-
-
-
-    <div id="upper-section" class="score-section">
-        <h2>Øvre Sektion</h2>
-      <ul class="upperScores">
-    <li class="En"><span class="field">1'ere:</span> <span class="score">0</span></li>
-    <li class="To"><span class="field">2'ere:</span> <span class="score">0</span></li>
-    <li class="Tre"><span class="field">3'ere:</span> <span class="score">0</span></li>
-    <li class="Fire"><span class="field">4'ere:</span> <span class="score">0</span></li>
-    <li class="Fem"><span class="field">5'ere:</span> <span class="score">0</span></li>
-    <li class="Seks"><span class="field">6'ere:</span> <span class="score">0</span></li>
-</ul>
-        <div class="upper-total">
-            <div class="sum-box">
-                <span class="label">Sum</span>
-                <span id="upper-sum" class="score">0</span>
-            </div>
-            <div class="sum-box">
-                <span class="label">Bonus</span>
-                <span id="upper-bonus" class="score">0</span>
-            </div>
+    <div id="dice-section">
+        <div id="dice-container">
+            <img src="Images/dice6.svg" class="die" id="dice0">
+            <img src="Images/dice6.svg" class="die" id="dice1">
+            <img src="Images/dice6.svg" class="die" id="dice2">
+            <img src="Images/dice6.svg" class="die" id="dice3">
+            <img src="Images/dice6.svg" class="die" id="dice4">
         </div>
+
+        <button id="roll-button">Roll dice</button>
+        <p id="throws-left">Kast tilbage: 3</p>
     </div>
 
+    <div id="upper-section" class="score-section">
+            <ul class="upperScores">
+                <li class="En"><span class="field">1'ere:</span> <span class="score">0</span></li>
+                <li class="To"><span class="field">2'ere:</span> <span class="score">0</span></li>
+                <li class="Tre"><span class="field">3'ere:</span> <span class="score">0</span></li>
+                <li class="Fire"><span class="field">4'ere:</span> <span class="score">0</span></li>
+                <li class="Fem"><span class="field">5'ere:</span> <span class="score">0</span></li>
+                <li class="Seks"><span class="field">6'ere:</span> <span class="score">0</span></li>
+            </ul>
+
+            <div class="upper-total">
+                <div class="sum-box">
+                    <span class="label">Sum</span>
+                    <span id="upper-sum" class="score">0</span>
+                </div>
+                <div class="sum-box">
+                    <span class="label">Bonus</span>
+                    <span id="upper-bonus" class="score">0</span>
+                </div>
+            </div>
+        </div>
 
     <div id="lower-section" class="score-section">
-        <h2>Nedre Sektion</h2>
-       <ul class="lowerScores">
-    <li class="etPar"><span class="field">1 par</span><span class="score">0</span></li>
-    <li class="toPar"><span class="field">2 par</span><span class="score">0</span></li>
-    <li class="trePar"><span class="field">3 par</span><span class="score">0</span></li>
-    <li class="fireEns"><span class="field">4 ens</span><span class="score">0</span></li>
-    <li class="lilleStraight"><span class="field">Lille straight</span><span class="score">0</span></li>
-    <li class="stortStraigt"><span class="field">Stort Straight</span><span class="score">0</span></li>
-    <li class="fuldtHus"><span class="field">Fuldt hus</span><span class="score">0</span></li>
-    <li class="Chance"><span class="field">Chance</span><span class="score">0</span></li>
-    <li class="YATZY"><span class="field">YATZY</span><span class="score">0</span></li>
-</ul>
+        <ul class="lowerScores">
+            <li class="etPar"><span class="field">1 par</span><span class="score">0</span></li>
+            <li class="toPar"><span class="field">2 par</span><span class="score">0</span></li>
+            <li class="trePar"><span class="field">3 par</span><span class="score">0</span></li>
+            <li class="fireEns"><span class="field">4 ens</span><span class="score">0</span></li>
+            <li class="lilleStraight"><span class="field">Lille straight</span><span class="score">0</span></li>
+            <li class="stortStraigt"><span class="field">Stort Straight</span><span class="score">0</span></li>
+            <li class="fuldtHus"><span class="field">Fuldt hus</span><span class="score">0</span></li>
+            <li class="Chance"><span class="field">Chance</span><span class="score">0</span></li>
+            <li class="YATZY"><span class="field">YATZY</span><span class="score">0</span></li>
+        </ul>
 
         <div class="total-score-box">
             <span class="label">Total Score</span>
