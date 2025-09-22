@@ -156,7 +156,9 @@ function updateTotals() {
     document.getElementById("upper-sum").textContent = upperSum;
 
     // Bonus
-    let bonus = (upperSum >= 63) ? 50 : 0;
+    let bonus = 0;
+    if (upperSum >= 63) bonus = 50;
+
     document.getElementById("upper-bonus").textContent = bonus;
 
     // Nedre sektion
