@@ -1,8 +1,4 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 body {
   display: grid;
    grid-template-areas:
@@ -14,7 +10,6 @@ body {
   grid-template-columns: 1fr minmax(600px, 900px) 1fr;
   grid-template-rows: auto auto 1fr 1fr;
   margin: 0;
-  padding: 1rem;
   font-family: sans-serif;
   background: linear-gradient(to bottom, #2B2D42, #92DCE5);
   height: 100vh;
