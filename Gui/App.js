@@ -12,8 +12,6 @@ for (let i = 0; i < cup.dices.length; i++) {
     });
 }
 
-
-
 function updateDicePic(index, eyes) {
     let diceNode = document.getElementById('dice' + index)
     diceNode.src = "Images/dice" + eyes + '.svg'
@@ -25,8 +23,11 @@ function updateThrowsLeft() {
 
     if (cup.numberOfThrows > 0) {
         throwsLeftNode.textContent = `Kast tilbage: ${cup.numberOfThrows}`;
+        throwsLeftNode.style.color = '#ffffff';
     } else {
         throwsLeftNode.textContent = 'Ingen kast tilbage';
+        throwsLeftNode.style.color = 'red';
+        
     }
 }
 

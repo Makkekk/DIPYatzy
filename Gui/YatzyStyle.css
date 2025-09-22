@@ -1,22 +1,54 @@
 body {
+  display: grid;
+  grid-template-rows: auto 1fr ;
+  grid-template-columns: 1fr;
+  height: auto;
+  margin: 0;
+  font-family: sans-serif;
+
   background: linear-gradient(to bottom, #2B2D42, #92DCE5);
+
 }
 
 .upperScores li, .lowerScores li {
-   display: grid;
-  grid-template-columns: 1fr auto; /* field on left, score on right */
+  display: grid;
+  grid-template-columns: 1fr auto; 
   align-items: center;
   border: 1px solid #000;
-  padding: 8px 12px;
-  margin-bottom: 5px;
+  padding: 4px 8px;
+  margin-bottom: 3px;
   border-radius: 5px;
+  font-size: 14px;
   background-color: #e0e0e0;
   cursor: pointer;
 }
+.upperScores, .lowerScores {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;       /* center the list */
+  font-size: 14px;
+  max-width: 700px;     /* limit the width so it fits on screen */
+  width: 100%;          /* take full width up to max-width */
+}
+
+
+#dice-container {
+  display: grid;
+  grid-template-columns: 60px 60px 60px 60px 60px;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#dice-container img {
+  width: 60px;
+  height: auto;
+}
+
 
 #roll-button {
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 10px 11px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -26,7 +58,7 @@ body {
 }
 
 #throws-left {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
   color: #ffffff;
   background-color: transparent;
@@ -44,33 +76,16 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 24px;
+  
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 10px;
-}
-
-#dice-container {
-  display: grid;
-  grid-template-columns: repeat(5, 60px); 
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-#dice-container img {
-  width: 60px;
-  height: 60px;
-}
-
-.upperScores, .lowerScores {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   font-size: 18px;
+  
 }
-
 
 .upper-total {
   display: grid;
@@ -81,8 +96,8 @@ h2 {
 }
 
 .sum-box {
-  width: 80px;
-  height: 80px;
+  width: 45px;
+  height: 45px;
   border: 2px solid #000;
   border-radius: 8px;
   display: grid;
@@ -90,12 +105,12 @@ h2 {
   background-color: #f5f5f5;
   font-weight: bold;
   cursor: default;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .total-score-box {
-  width: 100px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 2px solid #000;
   border-radius: 8px;
   display: grid;
@@ -103,11 +118,7 @@ h2 {
   background-color: #f5f5f5;
   font-weight: bold;
   margin: 10px auto;
-}
-
-.total-score-box .score {
-  margin-top: 5px;
-  font-size: 18px;
+  font-size: 18;
 }
 
 .die.hold {
