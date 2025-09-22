@@ -105,21 +105,37 @@ function setupCategoryClicks() {
         span.parentElement.addEventListener('click', () => {
             const category = span.parentElement.classList[0]; // fx "En", "etPar"
 
-            if (!lockedCategories[category] && cup.numberOfThrows <3) {
+            if (!lockedCategories[category]) {
                 lockedCategories[category] = true;
                 span.parentElement.classList.add("locked");
 
-                if (Object.keys(lockedCategories).length === 15){
+                if (Object.keys(lockedCategories).length === 15) {
                     const totalScore = document.getElementById("total-score").textContent;
                     alert("Spil afsluttet! Du fik i alt " + totalScore + " point 🎉");
+                    resetGame();
                 }
 
                 // Reset til ny runde
                 resetRound();
                 updateTotals();
-            } 
+            }
         })
     }
+}
+
+function resetGame() {
+    for (let key in lockedCategories) {
+        delete lockedCategories[key];
+    }
+        const scores = document.querySelectorAll('.score');
+        for(const span of scores){
+        span.textContent = "0";
+        span.parentElement.classList.remove("locked");
+    }
+
+    document.getElementById("upper-sum").textContent = "0";
+        document.getElementById("upper-bonus").textContent = "0";
+        document.getElementById("total-score").textContent = "0";
 }
 
 function resetRound() {
