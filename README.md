@@ -1,17 +1,17 @@
 # Yatzy Web Application
 
-Dette projekt er et obligatorisk miniprojekt, hvor det klassiske Yatzy-spil er implementeret som en webapplikation. Fokus har været på at skabe en interaktiv brugeroplevelse ved hjælp af vanilje JavaScript og moderne CSS-layout.
+This project is a mandatory mini-project where the classic game of Yatzy has been implemented as a web application. The focus was on creating an interactive user experience using vanilla JavaScript and modern CSS layouts.
 
-## Funktioner
-* **Spilmekanik:** Komplet logik for terningkast, fastholdelse af terninger (hold-funktion) og pointberegning for alle Yatzy-kombinationer.
-* **Interaktivt UI:** Dynamisk opdatering af pointmuligheder efter hvert kast og visuel feedback ved valg af kombinationer.
-* **Responsive Layout:** Opbygget med **CSS Grid** for at sikre en struktureret og overskuelig spilleplade.
-* **Game State:** Håndtering af runder (op til 3 kast) og automatisk beregning af sum, bonus og total.
+## Features
+* **Game Mechanics:** Complete logic for rolling dice, holding dice (hold function), and score calculation for all Yatzy combinations.
+* **Interactive UI:** Dynamic updates of scoring possibilities after each roll and visual feedback when selecting combinations.
+* **Responsive Layout:** Built with **CSS Grid** to ensure a structured and clear game board.
+* **Game State:** Management of rounds (up to 3 rolls) and automatic calculation of sum, bonus, and total.
 
-## Teknologier
+## Technologies
 * **Frontend:** HTML5, CSS3 (Grid Layout)
-* **Logik:** JavaScript (ES6+)
-* **Værktøjer:** Visual Studio Code
+* **Logic:** JavaScript (ES6+)
+* **Tools:** Visual Studio Code
 
-## Forfattere
-Karsten Kirkegaard, Rune Hyldgaard Jensen og Sidse Borch Mogensen
+## Authors
+Karsten Kirkegaard, Rune Hyldgaard Jensen, and Sidse Borch Mogensen
