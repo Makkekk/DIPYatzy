@@ -12,3 +12,6 @@ Dette projekt er et obligatorisk miniprojekt, hvor det klassiske Yatzy-spil er i
 * **Frontend:** HTML5, CSS3 (Grid Layout)
 * **Logik:** JavaScript (ES6+)
 * **Værktøjer:** Visual Studio Code
+
+## Forfattere
+Karsten Kirkegaard, Rune Hyldgaard Jensen og Sidse Borch Mogensen
